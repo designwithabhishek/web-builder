@@ -1,0 +1,370 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-family: -apple-system, BlinkMacSystemFont , 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    color:white;
+    background-color: rgb(28,30,33);
+}
+.heading{
+    width: 100%;
+    position:fixed;
+    z-index: 105; 
+}
+.mainnavigation h1{
+    font-size: 30px;
+    margin:0px;
+    padding:10px; 
+}
+.mainnavigation{
+    background-color:white;
+    width:100%;
+    font-size:25px;
+    font-weight: 500;
+    color:black;
+    position: fixed;
+    z-index: 99;
+    box-shadow:10px 0px 5px lightgray;
+    top: 0px;
+    height:10%;
+}
+.mainnavigation ul{
+    display: flex;
+    list-style-type:none;
+    margin: 0px;
+    
+}
+::-webkit-scrollbar{
+    width:8px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color:#a6a6a6;
+    box-shadow: inset 0px 0px 6px rgba(0,0,0,0.3); 
+}
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color:white;
+}
+.dropcontent{
+    font-size:16px;
+    display: none;
+    position:absolute;
+    min-width: 180px;
+    z-index: 1;  
+    box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.2);
+    transition: min-width 1s; 
+    border-radius: 15px 15px; 
+}
+#create{
+    background-color:unset;
+    border:2px solid white;
+    border-radius:10px;
+    float: right;
+    margin-right: 235px;
+    color:white;
+    padding: 5px;
+    font-size:14px;
+}
+#mobilemenu{
+    float: right;
+    display: none;
+}
+.dropdown{
+    display: inline-block;
+    position:relative;
+}
+.dropdown:hover .dropcontent{
+    display:block;
+    background-color:rgba(0,0,0,0.8);
+    color:whitesmoke;
+    
+}
+.dropbutton{
+display: inline-block;
+padding: 14px 16px;
+}
+.dropdown:hover{
+    background-color:rgb(38,38,38);
+    color: white;
+}
+.dropcontent button{
+    padding: 14px 16px;
+}
+#sview{
+    background-image: url(images/apple-bed-bedroom-54283.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    margin-top: 30px;
+}
+.n{
+    font-size: 18px;
+    vertical-align:super;
+}
+#overlay{
+    width: 100%;
+    height:100vh;
+    
+}
+#stext{
+    position: absolute;
+    font-size: 100px;
+    padding: 10px;
+    top:10%;
+    color:black;
+}
+#Linkbox{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#setup{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.9);
+    font-size: 18px;
+}
+#iselect{
+ position: absolute;
+ left:50%;
+ top:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+ padding: 20px;
+ background-color: rgb(38,38,38);
+ font-size: 18px;
+}
+#pagesetup{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    padding: 20px;
+    background-color: rgb(38,38,38);
+    font-size: 18px;
+}
+#try{
+    margin-top:150px;
+}
+.a{
+    float: right;
+}
+.nfile{
+    background-color: unset;
+    border: unset;
+    color:white;
+    font-size:18px;
+    padding: 10px;
+    text-align: center;
+    
+    transition:border-left 0.55s;
+    transition-timing-function:ease-in;
+}
+.nfile:hover{
+    border-left:8px solid white;
+    
+}
+#view
+{
+    display:none;
+    height: 90vh;
+    margin-top:3%;
+}
+#openfile{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    padding: 20px;
+    background-color: rgb(38,38,38);
+    font-size: 18px;
+}
+.b{
+    float: right;
+}
+.c{
+	float: right;
+}
+#stylebox{
+    width:30%;
+    display:none;
+    background-image:url(images/achievement-adult-agreement-1083623.jpg); 
+    font-size: 16px;
+    background-size: cover;
+    top:80px;
+    height: 90vh;
+    position: fixed;
+    overflow-y:auto;
+}
+#bodycontent li{
+    margin:10px;
+    list-style-type:none;
+}
+#bodycontent{
+    display:none;
+    padding: 10px;
+    margin-left: -40px;
+}
+#padding-content{
+    display:none;
+    padding: 10px;
+}
+#boxshadow-content{
+    display:none;
+    padding: 10px;
+
+}
+.styleboxsize{
+    float: right;
+    padding: 2px;
+    box-shadow: 0px 2px 3px black;
+}
+#stylesec1{
+    display: block;
+    margin:0px;   
+}
+#bodybox{
+    background-color:whitesmoke;
+    list-style-type: none;
+    color:black;
+    padding:10px;
+    
+}
+.buttondesign{
+    border-radius:15px;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.6);
+    color:whitesmoke;
+    width: 100%;
+    border:none;
+    letter-spacing: 1px;
+}
+.navcol{
+    background-color:whitesmoke;
+    list-style-type: none;
+    color:black;
+    padding:10px;
+    margin-left:-40px;
+}
+#Typographybox{
+    background-color: whitesmoke;
+    list-style-type: none;
+    color: black;
+    padding: 10px;
+}
+#closestyle{
+float: right;
+}
+#border-content{
+    display:none;
+    padding: 10px;
+}
+#Typography{
+    display:none;
+    padding: 10px;
+    line-height: 25px;
+    list-style-type: none;
+    margin-left: -40px;
+}
+#styleboxoverlay{
+    background-color: rgba(0,0,0,0.6);
+}
+#clo{
+    margin-right:600px;
+}
+#pagecontainer{
+display:none;
+width:100%;
+height:100%;
+position:absolute;
+color:black;
+background-color: rgb(28,30,33);
+}
+@media screen and (max-width:1272px)
+{
+ .styleboxsize{
+     float:none;
+     display: block;
+     width: 100%;
+     margin-top: 3px;
+ }
+ #mobilemenu{
+     margin:10px;
+      display: block;
+ }   
+ 
+ #desktopmenu{
+     display: none;
+     flex-direction: column;
+     position: absolute;
+     background-color:rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px gray;
+     right:0px;
+     top:74px;
+     padding: 0px;
+     width:25%;
+ }
+ .dropdown:hover .dropcontent{
+    display:flex;
+    position: relative;
+    background-color:rgba(0,0,0,0.8);
+    flex-direction: column;
+    color:whitesmoke;   
+  }
+  #view{
+      margin-top:50px;
+  }
+}
+@media screen and (max-width:750px)
+{
+    #desktopmenu{
+        width:50%;
+    }
+    #stylebox{
+        width:50%;
+    }
+    #setup{
+        width: 80%;
+        padding-left:20px; 
+    }
+    #pagesetup{
+        width: 80%;
+        padding-left:20px; 
+    }
+    .a{
+        display: block;
+        width: 100%;
+        float: none;
+    }
+    #create{
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width:400px)
+{
+    #desktopmenu{
+        width:100%;
+    }
+    #stylebox{
+        width:100%;
+    }
+    #stext{
+        font-size:60px;
+    }
+    #head1{
+        display:none;
+    }
+}

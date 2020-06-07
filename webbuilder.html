@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="webstyles.css" >
+</head>
+<body>
+    <div class="heading">
+        
+    </div>
+    <div class="mainnavigation">
+        <img src="images/551103-1TOqFD1502285018.jpg" width="100px" height="65px" style="float: left;border-radius: 50px;"/><h1  id="head1"style="float: left;color:black;">EVOLUTION</h1>
+        <ul id="desktopmenu">
+            <li class="dropdown">
+             <span class="dropbutton"><img src="images/iconfinder_home_981080.png" width="40px" height="40px" /><span class="n">&nbsp&nbsp Home</span></span>
+             <div class="dropcontent">
+                <button class="nfile" onclick="myfunc()"><img src="images/iconfinder_Rounded-32_2024643.png" width="40px" height="40px" /><span style="vertical-align:super;">&nbspNew File</span> </button>
+                <button class="nfile" onclick="displaypage()"><img src="images/iconfinder_new_981081.png" width="40px" height="40px" /><span style="vertical-align:super;">&nbspCreate Page</span></button>
+                <button class="nfile" onclick="openfileblock()"><img src="images/iconfinder_open_981082.png" width="40px" height="40px" /><span style="vertical-align:super;">&nbspOpen file</span></button>
+             </div>
+            </li>
+            <li class="dropdown">
+                <span class="dropbutton"><img src="images/iconfinder_Rounded-32_2024643.png" width="40px" height="40px" /><span class="n">&nbspElements</span></span>
+                    <div class="dropcontent">
+                            
+                                <button class="nfile" onclick="elements('heading')"><img src="images/heading.jpg" width="40px" height="40px"  /><span class="n">&nbspHeadings</span></button>
+                                <button class="nfile" onclick="elements('paragraph')"><img src="images/paragraph-folded-icon.png" width="40px" height="40px"  /><span class="n">&nbspparagraph</span></button>
+                                <button class="nfile" onclick="imgel()"><img src="images/iconfinder_gallery_1646013.png" width="40px" height="40px" /><span class="n">&nbspImage</span></button>
+                                <button class="nfile" onclick="linking()"><img src="images/iconfinder_link_basic_blue_69523.png" width="40px" height="40px"  /><span class="n">&nbspLinks</span></button>                              
+                            
+                            </div> </li>
+            <li class="dropbutton" onclick="openstylebox()"><img src="images/if_color_pailet_with_brush_896660.png" width="45px" height="45px"/><span class="n">Styles</span></li>
+            <li class="dropbutton" onclick="showpages()"><img src="images/iconfinder_open_981082.png" width="40px" height="40px" /><span class="n">&nbsp&nbspPages</span></li>
+            <li class="dropbutton" onclick="preview()"><img src="images/preview.png" width="44px" height="44px" /><span class="n">&nbsp&nbspPreview</span></li>
+            <li class="dropbutton"><img src="images/iconfinder_icon-ios7-help_211758.png" width="44px" height="44px" /><span class="n">&nbsp&nbspHelp</span></li>
+			<li class="dropbutton" onclick="del()"><img src="images/iconfinder_icons_delete_1564502.png" width="44px" height="44px" /><span class="n">Delete</span></li>
+        </ul>
+        <img id="mobilemenu" onclick="opener('desktopmenu')" src="images/iconfinder_00-ELASTOFONT-STORE-READY_menu_2703071.png" width="40px" height="40px" />
+    </div>
+    <div></div>>
+    <div id="sview">
+     <div id="overlay">
+     <h1 id="stext">Lets Create Something Beautiful</h1> 
+    </div>
+    </div>
+    <div id="setup">
+        <img  id="clo" onclick="closing()" src="assets/icons8-delete.svg" width="20px" height="20px"  />  
+        <h1>Set up a new Project</h1>
+        <p>Enter the name of the file<input class="a" type="text" name="filename"/></p>
+        <p>Enter the title of your project <input class="a" type="text" name="title"/></p>
+        <p>Upload favicon/Logo</p>
+        <button onclick="creatingfile(0)" id="create">Create</button>
+    </div>
+    <div id="pagesetup">
+        <img onclick="hidepage()" src="assets/icons8-delete.svg" width="20px" height="20px" style="margin-left: 600px;" />
+        <h1>Create a New Page</h1>
+        <p>Enter the name of the page<input  id="pagen" class="a" type="text" name="pagename"/></p>
+        <p>Enter the title of the page<input  id="pagetitle" class="a" type="text" name="pagetitles"/></p>
+        <p>Enter the Parent Page <input class="a" type="text" name="title"/></p>
+        <button onclick="addpage()" id="create">Create</button>
+    </div>
+    <div id=iselect>
+        <form id="form1"  enctype="multipart/form-data">
+        <input type="file" name="f"/>  
+        <input type="submit"  name="submit" value="upload"/>
+        </form>
+    </div>
+    <div  id="pagecontainer">
+      <p id="try"></p>
+    </div>
+    <div id="Linkbox">
+        <p id="linkedelement"></p>
+        <p id="linkingelement"></p>
+        <button value="Establish Link" onclick="establishlink()">Establish Link</button>
+        <button  value="Cancel" onclick="document.getElementById('Linkbox').style.display='none'">Cancel</button>
+    </div>
+    <div id="openfile">
+    <img onclick="closingfile()" src="assets/icons8-delete.svg" width="20px" height="20px" style="margin-left: 600px;" />
+    <h1>Open your File</h1>
+    <p>Enter the name of the file<input class="b" type="text" name="filename"/></p>
+    <button onclick="openingfile(0)" id="open">Open</button>
+    </div>
+    <div id="stylebox">
+        <div id="styleboxoverlay">
+        <p>&nbsp&nbspSTYLE MENU<img id="closestyle" onclick="closestylebox()" src="assets/icons8-delete.svg" width="20px" height="20px"  /></p>
+        <ul id="stylesec1">
+            <li  id="bodybox" class="navcol" onclick="opener('bodycontent')" id="bodybox">BODY<img  src="images/if_ic_arrow_drop_down_circle_48px_352022.png" width="25px" height="25px" style="float: right;"/></li>
+            
+            <div id="bodycontent">
+            <li class="hovereffect">Width:<input onfocusout="changingstyle('width',this.value)" class="styleboxsize" type="number" /></li>
+            <li>Height:<input onfocusout="changingstyle('height',this.value)" class="styleboxsize" type="number" /></li>
+            <li id="padding-box" class="navcol" onclick="opener('padding-content')">Padding:<img  src="images/if_ic_arrow_drop_down_circle_48px_352022.png" width="25px" height="25px" style="float: right;"/></li>
+            <div id="padding-content"> <li>Top    <input onfocusout="changingstyle('padding-top',this.value)" class="styleboxsize" type="number" /></li>
+            <li>Bottom    <input onfocusout="changingstyle('padding-bottom',this.value)" class="styleboxsize" type="number" /> </li>
+            <li>Right:    <input  onfocusout="changingstyle('padding-right',this.value)" class="styleboxsize" type="number" /> </li>
+            <li>Left:    <input onfocusout="changingstyle('padding-left',this.value)"class="styleboxsize" type="number" /></div></li>
+            <!--<li>Margin:<br> Top    <input class="styleboxsize" type="number" /> <br>Bottom    <input class="styleboxsize" type="number" /> <br>Right:    <input class="styleboxsize" type="number" /> <br>Left:    <input class="styleboxsize" type="number" /></li><-->
+            <li>Background-color: <input id="bgc" class="styleboxsize" type="color" /></li>
+            <li><button class="buttondesign"  onclick="changingstyle('Background-color',document.getElementById('bgc').value)" value="apply">Apply</button></li><br>
+            <li id="border-box" class="navcol" onclick="opener('border-content')">Border:<img  src="images/if_ic_arrow_drop_down_circle_48px_352022.png" width="25px" height="25px" style="float: right;"/></li>
+            <div id="border-content">
+            <li>Top <input onfocusout="changingstyle('border-top-width',this.value)" class="styleboxsize" type="number" /></li>
+            <li>Bottom<input onfocusout="changingstyle('border-bottom-width',this.value)" class="styleboxsize" type="number" /></li>
+             <li>Right:<input onfocusout="changingstyle('border-right-width',this.value)" class="styleboxsize" type="number" /></li> 
+             <li>Left<input onfocusout="changingstyle('border-left-width',this.value)" class="styleboxsize" type="number" /></li>
+            <li>Border-color:<input id="bordcol"  class="styleboxsize" type="color" /></li>
+            <li><button class="buttondesign"  onclick="changingstyle('Border-color',document.getElementById('bordcol').value)" value="apply">Apply</button></li>
+            <li>Border-style:<select id="bstyle"  class="styleboxsize"><option value="solid">solid</option><option value="dotted">dotted</option><option value="dashed">dashed</option><option value="double">double</option><option value="groove">groove</option><option value="ridge">ridge</option><option value="inset">inset</option></select></li>    
+            <li><button class="buttondesign"  onclick="boderstylefunc()" value="apply">Apply</button></li></div>
+            <li  id="box-shadow" class="navcol" onclick="opener('boxshadow-content')">Box-shadow:<img  src="images/if_ic_arrow_drop_down_circle_48px_352022.png" width="25px" height="25px" style="float: right;"/></li>
+            <div id="boxshadow-content">  
+               <li> Horizontal-shadow:<input id="bhz"  class="styleboxsize" type="number" /></li>
+               <li>Vertical-shadow:<input id="bvz" class="styleboxsize" type="number" /></li>
+                <li>Blur:<input id="bBlur" class="styleboxsize" type="number" /></li>
+                <li>Spread<input id="bspread" class="styleboxsize" type="number" /></li>
+                <li>Shadow-position:<span style="float: right;"><input id="sp1" name="Shadow-position" type="radio" value="inset" />inset <input id="sp2" name="Shadow-position" type="radio" value="" checked />outset</span></li>
+                <li>Shadow-color:<input  id="bsc" class="styleboxsize" type="color" /></li>
+                <li><button class="buttondesign"  onclick="boxshadowbutton()" value="apply">Apply</button></li><br>
+            </div>
+            </li>
+            </div>
+            <li  id="Typographybox" class="navcol" onclick="opener('Typography')">Typography<img  src="images/if_ic_arrow_drop_down_circle_48px_352022.png" width="25px" height="25px" style="float: right;"/></li>
+            <div id="Typography">
+             <button onclick="changingstyle('font-weight','bold')" style="background-color: white;border:1px ridge black;font-weight:bolder;">B</button>
+             <button onclick="changingstyle('text-decoration','underline')" style="background-color: white;border:1px solid black;text-decoration: underline;">U</button>
+             <button onclick="changingstyle('font-style','itallic')">I</button>
+            <li>Font-Size:<input onfocusout="changingstyle('font-size',this.value)" class="styleboxsize" type="number" /></li> 
+            <li>Font-color:<input id="fontcolor" class="styleboxsize" type="color" /></li>
+            <li><button class="buttondesign styleboxsize"  onclick="changingstyle('color',document.getElementById('fontcolor').value)" value="apply">Apply</button></li><br>
+            <li>Text-shadow:</li>
+             <li>Horizontal-shadow<input id="hz"  class="styleboxsize" type="number" /></li>
+             <li>Vertical-shadow:<input id="vz" class="styleboxsize" type="number" /></li>
+             <li>Blur:<input id="Blur" class="styleboxsize" type="number" /></li>
+             <li>Shadow-color:<input  id="sc" class="styleboxsize" type="color" /></li>
+            <li><button class="buttondesign"  onclick="textshadowbutton()" value="apply">Apply</button></li>
+            </div>
+        </ul>
+    </div>
+    </div>
+    
+            <iframe id="view" src="" width="100%"></iframe>
+    
+    <script>
+        var fn;
+        var idcounter=1;
+        var bodylogic=1;
+        control=[1,1,1,1,1,1];
+    function myfunc()
+    {
+      document.getElementById("setup").style.display='block';
+    }
+    function closing()
+    {
+        document.getElementById("setup").style.display='none';
+    }
+    function displaypage()
+    {
+        document.getElementById("pagesetup").style.display='block';
+    }
+    function hidepage()
+    {
+        document.getElementById("pagesetup").style.display='none';
+    }
+    function openfileblock()
+    {
+        document.getElementById("openfile").style.display='block';
+    }
+    function closingfile()
+    {
+        document.getElementById("openfile").style.display='none';
+    }
+    function closestylebox()
+    {
+        document.getElementById('stylebox').style.display='none';
+        document.getElementById('view').style.width='100%';
+    }
+    function creatingfile(o)
+    {
+       document.getElementById('sview').style.display='none';
+        var t=document.getElementsByClassName("a");
+         fn=t[o].value;
+        
+        //alert(fn);
+        var title=t[o+1].value; 
+        var  xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+		if(this.responseText=="ok") c=1;
+         alert(this.responseText);
+		     
+			
+         }
+        };
+        //xmlhttp.open("POST","creatingfile.php",true);
+        //xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        //xmlhttp.send("filename=fn&ftitle=title");
+        xhttp.open("GET","creatingfile.php?filename="+fn+"&ftitle="+title,false);
+        xhttp.send();
+        var hj=document.getElementById("view");
+        var filenaming=fn+".html";
+       hj.setAttribute("src",fn+"/"+filenaming);
+        //alert(hj.getAttribute("src"));
+        hj.style.display='flex';
+		
+    }
+    function elements(inputname)
+    {
+        var  filenaming;
+        var  xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+        filenaming=this.responseText;
+         }
+        };
+        //xmlhttp.open("POST","creatingfile.php",true);
+        //xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        //xmlhttp.send("filename=fn&ftitle=title");
+        xhttp.open("GET","creatingElements.php?inputname="+inputname+"&filename="+fn+"&id="+idcounter, false);
+        xhttp.send();
+        var hj=document.getElementById("view");
+        hj.setAttribute("src",fn+"/"+filenaming+".html");
+        idcounter++;
+		genPreview();
+    }
+    function establishlink()
+    {
+        var e=document.getElementById('pagescollection');
+        var valueselected=e.options[e.selectedIndex].value;
+
+        var  xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+         }
+        };
+        xhttp.open("GET","configlink.php?pagewheretolink="+valueselected+"&linked="+selectedelement, false);
+        xhttp.send();
+        document.getElementById('Linkbox').style.display='none';
+    }
+    function linking()
+    {
+      document.getElementById('Linkbox').style.display='block';
+      var xhttp=new XMLHttpRequest;
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+        if(this.responseText=="")
+        {
+            document.getElementById('linkedelement').innerHTML="Select an element to link";
+        }
+        else
+        {
+            selectedelement=this.responseText;
+        document.getElementById('linkedelement').innerHTML="Element selected:"+this.responseText;
+        }
+         }
+        };
+      xhttp.open("GET","getid.php",false);
+      xhttp.send();
+      var xhttp=new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+        document.getElementById('linkingelement').innerHTML=this.responseText;
+         }
+        };
+      xhttp.open("GET","availablepages.php",false);
+      xhttp.send();
+    } 
+    function openingfile(o)
+    {
+        var y=document.getElementsByClassName('b');
+        fn=y[o].value;
+		alert(fn);
+        var hj=document.getElementById("view");
+        var filenaming=fn+".html";
+        hj.setAttribute("src",fn+"/"+filenaming);
+        //alert(hj.getAttribute("src"));
+        hj.style.display='flex';
+    }
+    function openstylebox()
+    {
+        document.getElementById('stylebox').style.display='flex';
+        document.getElementById('stylebox').style.float='left';
+        document.getElementById('view').style.width='69%';
+        document.getElementById('view').style.float='right';
+        document.getElementById('stylebox').style.flexDirection='column';
+    }
+    function bodyopener(property,controlvariable)
+    {
+        alert(property);
+        if(control[controlvariable]==1)
+        {
+            if(controlvariable==5)
+            {
+                document.getElementById(property).style.display='flex';        
+            }
+            else
+            {
+            document.getElementById(property).style.display='block';
+            }
+         //document.getElementById('bodybox').style.backgroundColor='white';
+        //document.getElementById('bodybox').style.color='black';
+        control[controlvariable]=0;
+        }
+        else
+        {
+            document.getElementById(property).style.display='none';
+            control[controlvariable]=1;
+        }
+    }
+    function opener(val)
+    {
+      switch(val)
+      {
+          case 'padding-content':{
+               bodyopener("padding-content",1);
+               break;
+          }
+          case 'bodycontent':{
+              bodyopener("bodycontent",2);
+              break;
+          }
+          case 'border-content':{
+            bodyopener("border-content",0);
+              break;
+          }
+          case 'Typography':{
+              bodyopener("Typography",3);
+              break;
+          }
+          case 'boxshadow-content':{
+              bodyopener("boxshadow-content",4);
+              break;
+          }
+          case 'desktopmenu':{
+              bodyopener("desktopmenu",5);
+          }
+          default:{
+              alert("wrong");
+          }
+      }
+    }
+    function changingstyle(styletype,value)
+    {
+        var filenaming;
+        alert(value);
+        var xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+        filenaming=this.responseText;
+         }
+        };
+        xhttp.open("GET","modifystyle.php?styletype="+styletype+"&value="+encodeURIComponent(value), false);
+        xhttp.send();
+        var hj=document.getElementById("view");
+        //var filenaming=fn+".html";
+        //hj.setAttribute("src",fn+"/"+filenaming);
+        hj.setAttribute("src",fn+"/"+filenaming+".html");
+		genPreview();
+
+    }
+    function textshadowbutton()
+    {
+        alert("HELLO");
+        var hz=document.getElementById("hz").value;
+        var vz=document.getElementById("vz").value;
+        var bl=document.getElementById("Blur").value;
+        var sc=document.getElementById("sc").value;
+        if(hz=="")
+        {
+            hz=0;
+        }
+        if(vz=="")
+        {
+            vz=0;
+        }
+        if(bl=="")
+        {
+            bl=0;
+        }
+        var stri=hz+"px "+vz+"px "+bl+"px "+sc;
+        alert(stri);
+        changingstyle("text-shadow",stri);
+    }
+    function  boxshadowbutton()
+    {
+        alert("hj");
+        var bhz=document.getElementById("bhz").value;
+        var bvz=document.getElementById("bvz").value;
+        var bbl=document.getElementById("bBlur").value;
+        var bspread=document.getElementById("bspread").value;
+        var bsc=document.getElementById("bsc").value;
+        var sp;
+        if(document.getElementById("sp1").checked)
+        {
+          sp=document.getElementById("sp1").value;
+        }
+        if(document.getElementById("sp2").checked)
+        {
+          sp=document.getElementById("sp2").value;
+        }
+        if(bhz=="")
+        {
+            bhz=0;
+        }
+        if(bvz=="")
+        {
+            bvz=0;
+        }
+        if(bbl=="")
+        {
+            bbl=0;
+        }
+        if(bspread=="")
+        {
+            bspread=0;
+        }
+
+        var stri=bhz+"px "+bvz+"px "+bbl+"px "+bspread+"px "+sp+bsc;
+        alert(stri);
+        changingstyle("box-shadow",stri);
+    }
+    function boderstylefunc()
+    {
+        var e=document.getElementById('bstyle');
+        var t=e.options[e.selectedIndex].value;
+        changingstyle('border-style',t);
+    }
+    function addpage()
+    {
+        var pagename=document.getElementById('pagen').value;
+        var pagetitle=document.getElementById('pagetitle').value;
+        var  xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+         }
+        };
+        xhttp.open("GET","addpage.php?pagename="+pagename+"&ftitle="+pagetitle,false);
+        xhttp.send();
+    }
+    function showpages()
+    {
+        var ht=document.getElementById('pagecontainer').style.display='block';
+        var yu=document.getElementById('try');
+        //alert("po");
+        var xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200) {
+            alert(this.responseText);
+            yu.innerHTML=this.responseText;
+            //ht.innerHTML = "abhi"; //this.responseText;
+         }
+        };
+        //alert("ddf");
+        xhttp.open("GET","showpages.php",false);
+        xhttp.send();
+        alert("dfd");
+    }
+    function activepage(pagenam,stl,dr)
+    {
+        alert(pagenam);
+    
+        alert(stl);
+        alert(dr);
+        document.getElementById('pagecontainer').style.display='none';
+        var hj=document.getElementById("view");
+        hj.setAttribute("src",fn+"/"+pagenam);
+        var  xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+         }
+        };
+        xhttp.open("GET","setactivepage.php?apagename="+pagenam+"&astyle="+stl+"&dragm="+dr,false);
+        xhttp.send();
+    }
+	function genPreview(){
+	alert("generated");
+	 var xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+         alert("FFF");
+         alert(this.responseText);
+         }
+        };
+        xhttp.open("GET","genpreview.php", false);
+        xhttp.send();
+       
+	}
+    function imgel()
+    {
+	document.getElementById("iselect").style.display='block';
+	}
+    function formdata(ev)
+    {
+     document.getElementById("iselect").style.display='none';
+     var oData = new FormData(form);
+     var oReq = new XMLHttpRequest();
+     oReq.open("POST", "creatingElements.php?inputname="+"image"+"&filename="+fn+"&id="+idcounter, true);
+     oReq.send(oData);
+     oReq.onload = function(oEvent)
+      {
+       if (oReq.status == 200) 
+       {
+	    form.re
+	    //document.getElementById("form1").style.display='none';
+        var hj=document.getElementById("view");
+        //var filenaming=fn+".html";
+        alert(this.responseText);
+        filenaming=this.responseText;
+        hj.setAttribute("src",fn+"/"+filenaming+".html"); 
+		genPreview();
+       } 
+      };
+     ev.preventDefault();
+    }	
+		function del(){
+	alert("DD");
+	 var xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+         //alert("FFF");
+		 filenaming=this.responseText;
+		 alert(filenaming);
+         }
+        };
+        xhttp.open("GET","del.php", false);
+        xhttp.send();
+        var hj=document.getElementById("view");
+        
+        hj.setAttribute("src",fn+"/"+filenaming+".html");
+		genPreview();
+
+	
+	
+	}
+	
+	
+	function preview(){
+	alert("hhH");
+	 var xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+         alert("FFF");
+         alert(this.responseText);
+         }
+        };
+        xhttp.open("GET","preview.php", false);
+        xhttp.send();
+        var hj=document.getElementById("view");
+        var filenaming=fn+".html";
+        hj.setAttribute("src",fn+"/"+filenaming);
+        window.open(fn+"/final/"+filenaming,'_blank');
+	}
+   var form = document.getElementById("form1");
+   form.addEventListener('submit',formdata,false);
+    </script>    
+</body>
+</html>
